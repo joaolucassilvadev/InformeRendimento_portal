@@ -1,0 +1,12 @@
+name: ci-golang-workflow
+
+on: 
+
+push_request:
+  branches:
+    -develop
+
+
+jobs: 
+  checkout-application:
+     runs-on: ubuntu-latest
