@@ -21,6 +21,5 @@ jobs:
       - name: Executar testes
         run: go test
 
-      - name: Executar aplicação 
-        run: go run main.go
+  
 
