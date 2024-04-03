@@ -20,8 +20,7 @@ import (
 func FuncA(ctx *gin.Context) {
 	pdf := ctx.Param("pdf")
 
-	filePath := filepath.Join("/home/joao/leraquivo/paginas/", pdf+".pdf")
-
+	filePath := filepath.Join("/home/joao/leraquivo/InformeRendimento_portal/paginas/", pdf+".pdf")
 	fileBytes, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		ctx.JSON(http.StatusNotFound, gin.H{"error": "Arquivo não encontrado"})
