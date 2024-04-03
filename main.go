@@ -5,8 +5,6 @@ import (
 	"example.com/routes"
 
 	"github.com/gin-gonic/gin"
-	swaggerFiles "github.com/swaggo/files"
-	ginSwagger "github.com/swaggo/gin-swagger"
 	//"github.com/your_username/your_project/docs" // Substitua com o caminho do seu projeto
 )
 
@@ -24,7 +22,6 @@ func main() {
 	docs.SwaggerInfo.Version = "1.0"
 	routes.Routes(service)
 	// Rota para servir a documentação Swagger
-	service.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	// Rota para a funcionalidade de retorno de PDF
 
