@@ -17,6 +17,7 @@ import (
 // @Failure 404 {object} map[string]string
 // @Router /pdf/{pdf} [get]
 func FuncA(ctx *gin.Context) {
+	// essa rota retorna um arquivo pdf com o cpf fornecido
 	pdf := ctx.Param("pdf")
 
 	filePath := filepath.Join("/home/joao/leraquivo/InformeRendimento_portal/paginas/", pdf+".pdf")
