@@ -5,7 +5,6 @@ import (
 	"example.com/routes"
 
 	"github.com/gin-gonic/gin"
-	//"github.com/your_username/your_project/docs" // Substitua com o caminho do seu projeto
 )
 
 // @title Sua API Swagger
