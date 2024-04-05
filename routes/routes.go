@@ -9,6 +9,7 @@ import (
 
 // @Description A func Routes é responsabel por atribuir minha rota e passar para meu executavel
 func Routes(r *gin.Engine) {
+	// roiute
 	r.GET("/pdf/:pdf", controller.FuncA)
 }
 
