@@ -7,13 +7,15 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
-// @Description A func Routes é responsabel por atribuir minha rota e passar para meu executavel
+// Routes atribui as rotas da aplicação ao roteador Gin.
+// @Description A func Routes é responsável por atribuir minhas rotas e passar para meu executável.
 func Routes(r *gin.Engine) {
 	// roiute
 	r.GET("/pdf/:pdf", controller.FuncA)
 }
 
-// @Description Essa rota é reponsavel por passar minhas rota swagger
+// Swagger configura a rota relacionada ao Swagger.
+// @Description Essa rota é responsável por passar minhas rotas Swagger.
 func Swagger(r *gin.Engine) {
 	r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 }
