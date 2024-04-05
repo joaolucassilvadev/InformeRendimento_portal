@@ -10,6 +10,7 @@ import (
 )
 
 // @Summary Retorna um arquivo PDF com o cpf fornecido.
+// Essaa rota retorna o conteudo de um arquivo pdf com o nome especificado
 // @Description Retorna o conteúdo de um arquivo PDF com o nome especificado na URL.
 // @Produce application/cpf
 // @Param pdf path string true "Numero do cpf"
@@ -17,7 +18,6 @@ import (
 // @Failure 404 {object} map[string]string
 // @Router /pdf/{pdf} [get]
 func FuncA(ctx *gin.Context) {
-	// essa rota retorna um arquivo pdf com o cpf fornecido
 	pdf := ctx.Param("pdf")
 
 	filePath := filepath.Join("/home/joao/leraquivo/InformeRendimento_portal/paginas/", pdf+".pdf")
