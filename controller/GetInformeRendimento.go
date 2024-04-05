@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// funcA é um manipulador de rota que lida com solicitações GET para arquivos PDF.
 // @Summary Retorna um arquivo PDF com o cpf fornecido.
 // @Description Retorna o conteúdo de um arquivo PDF com o nome especificado na URL.
 // @Produce application/cpf
