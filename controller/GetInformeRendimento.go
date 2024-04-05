@@ -11,7 +11,6 @@ import (
 
 // @Summary Retorna um arquivo PDF com o cpf fornecido.
 // Essaa rota retorna o conteudo de um arquivo pdf com o nome especificado
-// @Description Retorna o conteúdo de um arquivo PDF com o nome especificado na URL.
 // @Produce application/cpf
 // @Param pdf path string true "Numero do cpf"
 // @Success 200 {file} application/pdf
