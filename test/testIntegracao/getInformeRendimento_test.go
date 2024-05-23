@@ -47,3 +47,6 @@ func TestGetError(t *testing.T) {
 
 	log.Printf("Test concluido com sucesso: %d", w.Code)
 }
+
+func TestErrorJson(t *testing.T) {
+}

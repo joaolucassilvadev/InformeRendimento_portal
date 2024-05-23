@@ -24,5 +24,5 @@ func main() {
 
 	// Rota para a funcionalidade de retorno de PDF
 
-	service.Run()
+	service.Run(":3032")
 }

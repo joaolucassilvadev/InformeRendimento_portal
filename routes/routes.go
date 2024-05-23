@@ -10,7 +10,12 @@ import (
 // Routes atribui as rotas da aplicação ao roteador Gin.
 // @Description A func Routes é responsável por atribuir minhas rotas e passar para meu executável.
 func Routes(r *gin.Engine) {
-	// roiute
+	// Rota para servir o arquivo HTML
+	r.GET("/", func(ctx *gin.Context) {
+		ctx.File("index.html")
+	})
+
+	// Rota para servir o PDF
 	r.GET("/pdf/:pdf", controller.FuncA)
 }
 
