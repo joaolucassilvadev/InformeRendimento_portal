@@ -1,0 +1,48 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Esta é uma API de exemplo utilizando Swagger e Gin",
+        "title": "Sua API Swagger",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8080",
+    "basePath": "/",
+    "paths": {
+        "/pdf/{pdf}": {
+            "get": {
+                "description": "Retorna o conteúdo de um arquivo PDF com o nome especificado na URL.",
+                "produces": [
+                    "application/cpf"
+                ],
+                "summary": "Retorna um arquivo PDF com o cpf fornecido.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Numero do cpf",
+                        "name": "pdf",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "file"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

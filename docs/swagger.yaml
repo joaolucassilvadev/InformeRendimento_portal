@@ -1,0 +1,33 @@
+basePath: /
+host: localhost:8080
+info:
+  contact: {}
+  description: Esta é uma API de exemplo utilizando Swagger e Gin
+  title: Sua API Swagger
+  version: "1.0"
+paths:
+  /pdf/{pdf}:
+    get:
+      description: Retorna o conteúdo de um arquivo PDF com o nome especificado na
+        URL.
+      parameters:
+      - description: Numero do cpf
+        in: path
+        name: pdf
+        required: true
+        type: string
+      produces:
+      - application/cpf
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: file
+        "404":
+          description: Not Found
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Retorna um arquivo PDF com o cpf fornecido.
+swagger: "2.0"
